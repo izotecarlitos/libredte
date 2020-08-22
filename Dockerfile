@@ -12,3 +12,5 @@ RUN git clone --recursive https://github.com/LibreDTE/libredte-webapp.git /var/w
     && mkdir -p data/static/contribuyentes \
     && $HOME/bin/composer install \
     && chown -R www-data:www-data /var/www/html/libredte
+
+RUN service apache2 restart
